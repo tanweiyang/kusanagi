@@ -1,0 +1,472 @@
+Trivially needed symbols: main main_func2 main_func main_func_recur a_func a_
+
+
+Initial Symbol table:
+
+printf/7 (printf) @0x7f134b5407a8
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  First run: 0
+  Function flags:
+  Called by: main/5 (1.00 per call) 
+  Calls: 
+aa_/6 (aa_) @0x7f134b544300
+  Type: variable
+  Visibility: external public common
+  References: 
+  Referring: main/5 (read)
+  Availability: not-ready
+  Varpool flags:
+main/5 (main) @0x7f134b540620
+  Type: function definition analyzed
+  Visibility: force_output public
+  Aux: @0x19fce40  References: main_func2/4 (addr)a_/0 (write)aa_/6 (read)a_/0 (read)
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: 
+  Calls: printf/7 (1.00 per call) main_func/3 (1.00 per call) 
+   Indirect call(1.00 per call) 
+   Indirect call(1.00 per call) 
+main_func2/4 (main_func2) @0x7f134b540498
+  Type: function definition analyzed
+  Visibility: force_output public
+  Address is taken.
+  Aux: @0x7f134b540620  References: 
+  Referring: main/5 (addr)
+  First run: 0
+  Function flags: body
+  Called by: 
+  Calls: main_func_recur/2 (1.00 per call) 
+main_func/3 (main_func) @0x7f134b540310
+  Type: function definition analyzed
+  Visibility: force_output public
+  Aux: @0x7f134b540498  References: 
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: main/5 (1.00 per call) main_func_recur/2 (1.00 per call) main_func_recur/2 (1.00 per call) a_func/1 (1.00 per call) 
+  Calls: a_func/1 (1.00 per call) main_func_recur/2 (1.00 per call) 
+main_func_recur/2 (main_func_recur) @0x7f134b540188
+  Type: function definition analyzed
+  Visibility: force_output public
+  Aux: @0x7f134b540310  References: 
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: main_func2/4 (1.00 per call) main_func/3 (1.00 per call) 
+  Calls: main_func/3 (1.00 per call) main_func/3 (1.00 per call) 
+a_func/1 (a_func) @0x7f134b540000
+  Type: function definition analyzed
+  Visibility: force_output public
+  Aux: @0x7f134b540188  References: 
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: main_func/3 (1.00 per call) 
+  Calls: main_func/3 (1.00 per call) 
+a_/0 (a_) @0x7f134b537c00
+  Type: variable definition analyzed
+  Visibility: force_output
+  Aux: @0x7f134b540000  References: 
+  Referring: main/5 (write)main/5 (read)
+  Availability: not-ready
+  Varpool flags:
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+printf/7 (printf) @0x7f134b5407a8
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  First run: 0
+  Function flags:
+  Called by: main/5 (1.00 per call) 
+  Calls: 
+aa_/6 (aa_) @0x7f134b544300
+  Type: variable
+  Visibility: external public common
+  References: 
+  Referring: main/5 (read)
+  Availability: not-ready
+  Varpool flags:
+main/5 (main) @0x7f134b540620
+  Type: function definition analyzed
+  Visibility: force_output public
+  References: main_func2/4 (addr)a_/0 (write)aa_/6 (read)a_/0 (read)
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: 
+  Calls: printf/7 (1.00 per call) main_func/3 (1.00 per call) 
+   Indirect call(1.00 per call) 
+   Indirect call(1.00 per call) 
+main_func2/4 (main_func2) @0x7f134b540498
+  Type: function definition analyzed
+  Visibility: force_output public
+  Address is taken.
+  References: 
+  Referring: main/5 (addr)
+  First run: 0
+  Function flags: body
+  Called by: 
+  Calls: main_func_recur/2 (1.00 per call) 
+main_func/3 (main_func) @0x7f134b540310
+  Type: function definition analyzed
+  Visibility: force_output public
+  References: 
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: main/5 (1.00 per call) main_func_recur/2 (1.00 per call) main_func_recur/2 (1.00 per call) a_func/1 (1.00 per call) 
+  Calls: a_func/1 (1.00 per call) main_func_recur/2 (1.00 per call) 
+main_func_recur/2 (main_func_recur) @0x7f134b540188
+  Type: function definition analyzed
+  Visibility: force_output public
+  References: 
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: main_func2/4 (1.00 per call) main_func/3 (1.00 per call) 
+  Calls: main_func/3 (1.00 per call) main_func/3 (1.00 per call) 
+a_func/1 (a_func) @0x7f134b540000
+  Type: function definition analyzed
+  Visibility: force_output public
+  References: 
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: main_func/3 (1.00 per call) 
+  Calls: main_func/3 (1.00 per call) 
+a_/0 (a_) @0x7f134b537c00
+  Type: variable definition analyzed
+  Visibility: force_output
+  References: 
+  Referring: main/5 (write)main/5 (read)
+  Availability: not-ready
+  Varpool flags:
+
+
+Initial Symbol table:
+
+printf/7 (printf) @0x7f134b5407a8
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  First run: 0
+  Function flags:
+  Called by: main/5 (1.00 per call) 
+  Calls: 
+aa_/6 (aa_) @0x7f134b544300
+  Type: variable
+  Visibility: external public common
+  References: 
+  Referring: main/5 (read)
+  Availability: not-ready
+  Varpool flags:
+main/5 (main) @0x7f134b540620
+  Type: function definition analyzed
+  Visibility: force_output public
+  References: main_func2/4 (addr)a_/0 (write)aa_/6 (read)a_/0 (read)
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: 
+  Calls: printf/7 (1.00 per call) main_func/3 (1.00 per call) 
+   Indirect call(1.00 per call) 
+   Indirect call(1.00 per call) 
+main_func2/4 (main_func2) @0x7f134b540498
+  Type: function definition analyzed
+  Visibility: force_output public
+  Address is taken.
+  References: 
+  Referring: main/5 (addr)
+  First run: 0
+  Function flags: body
+  Called by: 
+  Calls: main_func_recur/2 (1.00 per call) 
+main_func/3 (main_func) @0x7f134b540310
+  Type: function definition analyzed
+  Visibility: force_output public
+  References: 
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: main/5 (1.00 per call) main_func_recur/2 (1.00 per call) main_func_recur/2 (1.00 per call) a_func/1 (1.00 per call) 
+  Calls: a_func/1 (1.00 per call) main_func_recur/2 (1.00 per call) 
+main_func_recur/2 (main_func_recur) @0x7f134b540188
+  Type: function definition analyzed
+  Visibility: force_output public
+  References: 
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: main_func2/4 (1.00 per call) main_func/3 (1.00 per call) 
+  Calls: main_func/3 (1.00 per call) main_func/3 (1.00 per call) 
+a_func/1 (a_func) @0x7f134b540000
+  Type: function definition analyzed
+  Visibility: force_output public
+  References: 
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: main_func/3 (1.00 per call) 
+  Calls: main_func/3 (1.00 per call) 
+a_/0 (a_) @0x7f134b537c00
+  Type: variable definition analyzed
+  Visibility: force_output
+  References: 
+  Referring: main/5 (write)main/5 (read)
+  Availability: not-ready
+  Varpool flags:
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+printf/7 (printf) @0x7f134b5407a8
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  First run: 0
+  Function flags:
+  Called by: main/5 (1.00 per call) 
+  Calls: 
+aa_/6 (aa_) @0x7f134b544300
+  Type: variable
+  Visibility: external public common
+  References: 
+  Referring: main/5 (read)
+  Availability: not-ready
+  Varpool flags:
+main/5 (main) @0x7f134b540620
+  Type: function definition analyzed
+  Visibility: force_output public
+  References: main_func2/4 (addr)a_/0 (write)aa_/6 (read)a_/0 (read)
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: 
+  Calls: printf/7 (1.00 per call) main_func/3 (1.00 per call) 
+   Indirect call(1.00 per call) 
+   Indirect call(1.00 per call) 
+main_func2/4 (main_func2) @0x7f134b540498
+  Type: function definition analyzed
+  Visibility: force_output public
+  Address is taken.
+  References: 
+  Referring: main/5 (addr)
+  First run: 0
+  Function flags: body
+  Called by: 
+  Calls: main_func_recur/2 (1.00 per call) 
+main_func/3 (main_func) @0x7f134b540310
+  Type: function definition analyzed
+  Visibility: force_output public
+  References: 
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: main/5 (1.00 per call) main_func_recur/2 (1.00 per call) main_func_recur/2 (1.00 per call) a_func/1 (1.00 per call) 
+  Calls: a_func/1 (1.00 per call) main_func_recur/2 (1.00 per call) 
+main_func_recur/2 (main_func_recur) @0x7f134b540188
+  Type: function definition analyzed
+  Visibility: force_output public
+  References: 
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: main_func2/4 (1.00 per call) main_func/3 (1.00 per call) 
+  Calls: main_func/3 (1.00 per call) main_func/3 (1.00 per call) 
+a_func/1 (a_func) @0x7f134b540000
+  Type: function definition analyzed
+  Visibility: force_output public
+  References: 
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: main_func/3 (1.00 per call) 
+  Calls: main_func/3 (1.00 per call) 
+a_/0 (a_) @0x7f134b537c00
+  Type: variable definition analyzed
+  Visibility: force_output
+  References: 
+  Referring: main/5 (write)main/5 (read)
+  Availability: not-ready
+  Varpool flags:
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+printf/7 (printf) @0x7f134b5407a8
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  First run: 0
+  Function flags:
+  Called by: main/5 (1.00 per call) 
+  Calls: 
+aa_/6 (aa_) @0x7f134b544300
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: external public common
+  References: 
+  Referring: main/5 (read)
+  Availability: not_available
+  Varpool flags:
+main/5 (main) @0x7f134b540620
+  Type: function definition analyzed
+  Visibility: force_output externally_visible public
+  References: main_func2/4 (addr)a_/0 (write)aa_/6 (read)a_/0 (read)
+  Referring: 
+  Availability: available
+  First run: 0
+  Function flags: body
+  Called by: 
+  Calls: printf/7 (1.00 per call) main_func/3 (1.00 per call) 
+   Indirect call(1.00 per call) 
+   Indirect call(1.00 per call) 
+main_func2/4 (main_func2) @0x7f134b540498
+  Type: function definition analyzed
+  Visibility: force_output externally_visible public
+  Address is taken.
+  References: 
+  Referring: main/5 (addr)
+  Availability: available
+  First run: 0
+  Function flags: body
+  Called by: 
+  Calls: main_func_recur/2 (1.00 per call) 
+main_func/3 (main_func) @0x7f134b540310
+  Type: function definition analyzed
+  Visibility: force_output externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  First run: 0
+  Function flags: body
+  Called by: main/5 (1.00 per call) main_func_recur/2 (1.00 per call) main_func_recur/2 (1.00 per call) a_func/1 (1.00 per call) 
+  Calls: a_func/1 (1.00 per call) main_func_recur/2 (1.00 per call) 
+main_func_recur/2 (main_func_recur) @0x7f134b540188
+  Type: function definition analyzed
+  Visibility: force_output externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  First run: 0
+  Function flags: body
+  Called by: main_func2/4 (1.00 per call) main_func/3 (1.00 per call) 
+  Calls: main_func/3 (1.00 per call) main_func/3 (1.00 per call) 
+a_func/1 (a_func) @0x7f134b540000
+  Type: function definition analyzed
+  Visibility: force_output externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  First run: 0
+  Function flags: body
+  Called by: main_func/3 (1.00 per call) 
+  Calls: main_func/3 (1.00 per call) 
+a_/0 (a_) @0x7f134b537c00
+  Type: variable definition analyzed
+  Visibility: force_output prevailing_def_ironly
+  References: 
+  Referring: main/5 (write)main/5 (read)
+  Availability: available
+  Varpool flags:
+Materializing clones
+Materialization Call site updates done.
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+
+Final Symbol table:
+
+printf/7 (printf) @0x7f134b5407a8
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  First run: 0
+  Function flags:
+  Called by: 
+  Calls: 
+aa_/6 (aa_) @0x7f134b544300
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: external public common
+  References: 
+  Referring: 
+  Availability: not_available
+  Varpool flags:
+main/5 (main) @0x7f134b540620
+  Type: function definition analyzed
+  Visibility: force_output externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  First run: 0
+  Function flags:
+  Called by: 
+  Calls: 
+main_func2/4 (main_func2) @0x7f134b540498
+  Type: function definition analyzed
+  Visibility: force_output externally_visible asm_written public
+  Address is taken.
+  References: 
+  Referring: 
+  Availability: available
+  First run: 0
+  Function flags:
+  Called by: 
+  Calls: 
+main_func/3 (main_func) @0x7f134b540310
+  Type: function definition analyzed
+  Visibility: force_output externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  First run: 0
+  Function flags:
+  Called by: 
+  Calls: 
+main_func_recur/2 (main_func_recur) @0x7f134b540188
+  Type: function definition analyzed
+  Visibility: force_output externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  First run: 0
+  Function flags:
+  Called by: 
+  Calls: 
+a_func/1 (a_func) @0x7f134b540000
+  Type: function definition analyzed
+  Visibility: force_output externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  First run: 0
+  Function flags:
+  Called by: 
+  Calls: 
+a_/0 (a_) @0x7f134b537c00
+  Type: variable definition analyzed
+  Visibility: force_output prevailing_def_ironly asm_written
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags:

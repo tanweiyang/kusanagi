@@ -1,0 +1,92 @@
+a_@/example/output/main.c.000i.cgraph:
+  name: a_
+  type: variable
+  visibility: 
+  referring: [main]
+  filename: [/example/output/main.c.000i.cgraph]
+a_func:
+  name: a_func
+  type: function
+  visibility: public
+  calls: [a_inline_static_func@/example/output/a.c.000i.cgraph, main_func]
+  called_by: [main_func, main_func@/example/output/a.c.000i.cgraph]
+  filename: [/example/output/a.c.000i.cgraph, /example/output/main.c.000i.cgraph]
+a_inline_static_func@/example/output/a.c.000i.cgraph:
+  name: a_inline_static_func
+  type: function
+  referring: [aa_]
+  called_by: [a_func]
+  filename: [/example/output/a.c.000i.cgraph]
+a_static_func2@/example/output/a.c.000i.cgraph:
+  name: a_static_func2
+  type: function
+  visibility: 
+  calls: []
+  filename: [/example/output/a.c.000i.cgraph]
+aa_:
+  name: aa_
+  type: variable
+  visibility: public
+  references: [a_inline_static_func@/example/output/a.c.000i.cgraph]
+  referring: [main]
+  filename: [/example/output/a.c.000i.cgraph]
+b_:
+  name: b_
+  type: variable
+  visibility: public
+  referring: [b_func, b_static_func@/example/output/b.c.000i.cgraph]
+  filename: [/example/output/b.c.000i.cgraph]
+b_func:
+  name: b_func
+  type: function
+  visibility: public
+  references: [b_]
+  called_by: [b_static_func@/example/output/b.c.000i.cgraph]
+  filename: [/example/output/b.c.000i.cgraph]
+b_static_func@/example/output/b.c.000i.cgraph:
+  name: b_static_func
+  type: function
+  visibility: 
+  references: [b_]
+  calls: [b_func]
+  filename: [/example/output/b.c.000i.cgraph]
+main:
+  name: main
+  type: function
+  visibility: public
+  references: [a_@/example/output/main.c.000i.cgraph, aa_, main_func2]
+  calls: [printf, main_func]
+  filename: [/example/output/main.c.000i.cgraph]
+main_func:
+  name: main_func
+  type: function
+  visibility: public
+  calls: [main_func_recur, a_func]
+  called_by: [a_func, main, main_func_recur]
+  filename: [/example/output/main.c.000i.cgraph]
+main_func2:
+  name: main_func2
+  type: function
+  visibility: public
+  referring: [main]
+  calls: [main_func_recur]
+  filename: [/example/output/main.c.000i.cgraph]
+main_func@/example/output/a.c.000i.cgraph:
+  name: main_func
+  type: function
+  visibility: 
+  calls: [a_func]
+  filename: [/example/output/a.c.000i.cgraph]
+main_func_recur:
+  name: main_func_recur
+  type: function
+  visibility: public
+  calls: [main_func]
+  called_by: [main_func2, main_func]
+  filename: [/example/output/main.c.000i.cgraph]
+printf:
+  name: printf
+  type: function
+  visibility: public
+  called_by: [main]
+  filename: []

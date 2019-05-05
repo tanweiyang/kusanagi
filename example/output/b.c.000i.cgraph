@@ -1,0 +1,230 @@
+Trivially needed symbols: b_func b_static_func b_ a_
+
+
+Initial Symbol table:
+
+b_func/3 (b_func) @0x7fdfbe6f1620
+  Type: function definition analyzed
+  Visibility: force_output public
+  Aux: @0x19fce40  References: b_/1 (read)
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: b_static_func/2 (1.00 per call) 
+  Calls: 
+b_static_func/2 (b_static_func) @0x7fdfbe6f1498
+  Type: function definition analyzed
+  Visibility: force_output
+  Aux: @0x7fdfbe6f1620  References: b_/1 (read)
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: 
+  Calls: b_func/3 (1.00 per call) 
+b_/1 (b_) @0x7fdfbe81a180
+  Type: variable definition analyzed
+  Visibility: force_output public common
+  Aux: @0x7fdfbe6f1498  References: 
+  Referring: b_static_func/2 (read)b_func/3 (read)
+  Availability: not-ready
+  Varpool flags:
+a_/0 (a_) @0x7fdfbe81a100
+  Type: variable definition analyzed
+  Visibility: force_output
+  Aux: @0x7fdfbe81a180  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags:
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+b_func/3 (b_func) @0x7fdfbe6f1620
+  Type: function definition analyzed
+  Visibility: force_output public
+  References: b_/1 (read)
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: b_static_func/2 (1.00 per call) 
+  Calls: 
+b_static_func/2 (b_static_func) @0x7fdfbe6f1498
+  Type: function definition analyzed
+  Visibility: force_output
+  References: b_/1 (read)
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: 
+  Calls: b_func/3 (1.00 per call) 
+b_/1 (b_) @0x7fdfbe81a180
+  Type: variable definition analyzed
+  Visibility: force_output public common
+  References: 
+  Referring: b_static_func/2 (read)b_func/3 (read)
+  Availability: not-ready
+  Varpool flags:
+a_/0 (a_) @0x7fdfbe81a100
+  Type: variable definition analyzed
+  Visibility: force_output
+  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags:
+
+
+Initial Symbol table:
+
+b_func/3 (b_func) @0x7fdfbe6f1620
+  Type: function definition analyzed
+  Visibility: force_output public
+  References: b_/1 (read)
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: b_static_func/2 (1.00 per call) 
+  Calls: 
+b_static_func/2 (b_static_func) @0x7fdfbe6f1498
+  Type: function definition analyzed
+  Visibility: force_output
+  References: b_/1 (read)
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: 
+  Calls: b_func/3 (1.00 per call) 
+b_/1 (b_) @0x7fdfbe81a180
+  Type: variable definition analyzed
+  Visibility: force_output public common
+  References: 
+  Referring: b_static_func/2 (read)b_func/3 (read)
+  Availability: not-ready
+  Varpool flags:
+a_/0 (a_) @0x7fdfbe81a100
+  Type: variable definition analyzed
+  Visibility: force_output
+  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags:
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+b_func/3 (b_func) @0x7fdfbe6f1620
+  Type: function definition analyzed
+  Visibility: force_output public
+  References: b_/1 (read)
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: b_static_func/2 (1.00 per call) 
+  Calls: 
+b_static_func/2 (b_static_func) @0x7fdfbe6f1498
+  Type: function definition analyzed
+  Visibility: force_output
+  References: b_/1 (read)
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: 
+  Calls: b_func/3 (1.00 per call) 
+b_/1 (b_) @0x7fdfbe81a180
+  Type: variable definition analyzed
+  Visibility: force_output public common
+  References: 
+  Referring: b_static_func/2 (read)b_func/3 (read)
+  Availability: not-ready
+  Varpool flags:
+a_/0 (a_) @0x7fdfbe81a100
+  Type: variable definition analyzed
+  Visibility: force_output
+  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags:
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+b_func/3 (b_func) @0x7fdfbe6f1620
+  Type: function definition analyzed
+  Visibility: force_output externally_visible public
+  References: b_/1 (read)
+  Referring: 
+  Availability: available
+  First run: 0
+  Function flags: body
+  Called by: b_static_func/2 (1.00 per call) 
+  Calls: 
+b_static_func/2 (b_static_func) @0x7fdfbe6f1498
+  Type: function definition analyzed
+  Visibility: force_output prevailing_def_ironly
+  References: b_/1 (read)
+  Referring: 
+  Availability: available
+  First run: 0
+  Function flags: body
+  Called by: 
+  Calls: b_func/3 (1.00 per call) 
+b_/1 (b_) @0x7fdfbe81a180
+  Type: variable definition analyzed
+  Visibility: force_output externally_visible public common
+  References: 
+  Referring: b_func/3 (read)b_static_func/2 (read)
+  Availability: overwritable
+  Varpool flags:
+a_/0 (a_) @0x7fdfbe81a100
+  Type: variable definition analyzed
+  Visibility: force_output prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags:
+Materializing clones
+Materialization Call site updates done.
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+
+Final Symbol table:
+
+b_func/3 (b_func) @0x7fdfbe6f1620
+  Type: function definition analyzed
+  Visibility: force_output externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  First run: 0
+  Function flags:
+  Called by: 
+  Calls: 
+b_static_func/2 (b_static_func) @0x7fdfbe6f1498
+  Type: function definition analyzed
+  Visibility: force_output prevailing_def_ironly asm_written
+  References: 
+  Referring: 
+  Availability: available
+  First run: 0
+  Function flags:
+  Called by: 
+  Calls: 
+b_/1 (b_) @0x7fdfbe81a180
+  Type: variable definition analyzed
+  Visibility: force_output externally_visible asm_written public common
+  References: 
+  Referring: 
+  Availability: overwritable
+  Varpool flags:
+a_/0 (a_) @0x7fdfbe81a100
+  Type: variable definition analyzed
+  Visibility: force_output prevailing_def_ironly asm_written
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags:

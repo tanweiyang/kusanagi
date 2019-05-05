@@ -1,0 +1,348 @@
+Trivially needed symbols: main_func a_static_func2 a_func aa_ a_
+
+
+Initial Symbol table:
+
+main_func/5 (main_func) @0x7f7550f44930
+  Type: function definition analyzed
+  Visibility: force_output
+  Aux: @0x19fce40  References: 
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: 
+  Calls: a_func/3 (1.00 per call) 
+a_static_func2/4 (a_static_func2) @0x7f7550f447a8
+  Type: function definition analyzed
+  Visibility: force_output
+  Aux: @0x7f7550f44930  References: 
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: 
+  Calls: a_inline_static_func/2 (1.00 per call) a_func/3 (1.00 per call) 
+a_func/3 (a_func) @0x7f7550f44620
+  Type: function definition analyzed
+  Visibility: force_output public weak
+  Aux: @0x7f7550f447a8  References: 
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: main_func/5 (1.00 per call) a_static_func2/4 (1.00 per call) 
+  Calls: a_inline_static_func/2 (1.00 per call) 
+a_inline_static_func/2 (a_inline_static_func) @0x7f7550f44498
+  Type: function definition analyzed
+  Visibility:
+  Address is taken.
+  Aux: @0x7f7550f44620  References: 
+  Referring: aa_/1 (addr)
+  First run: 0
+  Function flags: body
+  Called by: a_static_func2/4 (1.00 per call) a_func/3 (1.00 per call) 
+  Calls: 
+aa_/1 (aa_) @0x7f755106d200
+  Type: variable definition analyzed
+  Visibility: force_output public
+  Aux: @0x7f7550f44620  References: a_inline_static_func/2 (addr)
+  Referring: 
+  Availability: not-ready
+  Varpool flags: initialized
+a_/0 (a_) @0x7f755106d080
+  Type: variable definition analyzed
+  Visibility: force_output
+  Aux: @0x7f755106d200  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags:
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+main_func/5 (main_func) @0x7f7550f44930
+  Type: function definition analyzed
+  Visibility: force_output
+  References: 
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: 
+  Calls: a_func/3 (1.00 per call) 
+a_static_func2/4 (a_static_func2) @0x7f7550f447a8
+  Type: function definition analyzed
+  Visibility: force_output
+  References: 
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: 
+  Calls: a_inline_static_func/2 (1.00 per call) a_func/3 (1.00 per call) 
+a_func/3 (a_func) @0x7f7550f44620
+  Type: function definition analyzed
+  Visibility: force_output public weak
+  References: 
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: main_func/5 (1.00 per call) a_static_func2/4 (1.00 per call) 
+  Calls: a_inline_static_func/2 (1.00 per call) 
+a_inline_static_func/2 (a_inline_static_func) @0x7f7550f44498
+  Type: function definition analyzed
+  Visibility:
+  Address is taken.
+  References: 
+  Referring: aa_/1 (addr)
+  First run: 0
+  Function flags: body
+  Called by: a_static_func2/4 (1.00 per call) a_func/3 (1.00 per call) 
+  Calls: 
+aa_/1 (aa_) @0x7f755106d200
+  Type: variable definition analyzed
+  Visibility: force_output public
+  References: a_inline_static_func/2 (addr)
+  Referring: 
+  Availability: not-ready
+  Varpool flags: initialized
+a_/0 (a_) @0x7f755106d080
+  Type: variable definition analyzed
+  Visibility: force_output
+  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags:
+
+
+Initial Symbol table:
+
+main_func/5 (main_func) @0x7f7550f44930
+  Type: function definition analyzed
+  Visibility: force_output
+  References: 
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: 
+  Calls: a_func/3 (1.00 per call) 
+a_static_func2/4 (a_static_func2) @0x7f7550f447a8
+  Type: function definition analyzed
+  Visibility: force_output
+  References: 
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: 
+  Calls: a_inline_static_func/2 (1.00 per call) a_func/3 (1.00 per call) 
+a_func/3 (a_func) @0x7f7550f44620
+  Type: function definition analyzed
+  Visibility: force_output public weak
+  References: 
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: main_func/5 (1.00 per call) a_static_func2/4 (1.00 per call) 
+  Calls: a_inline_static_func/2 (1.00 per call) 
+a_inline_static_func/2 (a_inline_static_func) @0x7f7550f44498
+  Type: function definition analyzed
+  Visibility:
+  Address is taken.
+  References: 
+  Referring: aa_/1 (addr)
+  First run: 0
+  Function flags: body
+  Called by: a_static_func2/4 (1.00 per call) a_func/3 (1.00 per call) 
+  Calls: 
+aa_/1 (aa_) @0x7f755106d200
+  Type: variable definition analyzed
+  Visibility: force_output public
+  References: a_inline_static_func/2 (addr)
+  Referring: 
+  Availability: not-ready
+  Varpool flags: initialized
+a_/0 (a_) @0x7f755106d080
+  Type: variable definition analyzed
+  Visibility: force_output
+  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags:
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+main_func/5 (main_func) @0x7f7550f44930
+  Type: function definition analyzed
+  Visibility: force_output
+  References: 
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: 
+  Calls: a_func/3 (1.00 per call) 
+a_static_func2/4 (a_static_func2) @0x7f7550f447a8
+  Type: function definition analyzed
+  Visibility: force_output
+  References: 
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: 
+  Calls: a_inline_static_func/2 (1.00 per call) a_func/3 (1.00 per call) 
+a_func/3 (a_func) @0x7f7550f44620
+  Type: function definition analyzed
+  Visibility: force_output public weak
+  References: 
+  Referring: 
+  First run: 0
+  Function flags: body
+  Called by: main_func/5 (1.00 per call) a_static_func2/4 (1.00 per call) 
+  Calls: a_inline_static_func/2 (1.00 per call) 
+a_inline_static_func/2 (a_inline_static_func) @0x7f7550f44498
+  Type: function definition analyzed
+  Visibility:
+  Address is taken.
+  References: 
+  Referring: aa_/1 (addr)
+  First run: 0
+  Function flags: body
+  Called by: a_static_func2/4 (1.00 per call) a_func/3 (1.00 per call) 
+  Calls: 
+aa_/1 (aa_) @0x7f755106d200
+  Type: variable definition analyzed
+  Visibility: force_output public
+  References: a_inline_static_func/2 (addr)
+  Referring: 
+  Availability: not-ready
+  Varpool flags: initialized
+a_/0 (a_) @0x7f755106d080
+  Type: variable definition analyzed
+  Visibility: force_output
+  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags:
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+main_func/5 (main_func) @0x7f7550f44930
+  Type: function definition analyzed
+  Visibility: force_output prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: available
+  First run: 0
+  Function flags: body
+  Called by: 
+  Calls: a_func/3 (1.00 per call) 
+a_static_func2/4 (a_static_func2) @0x7f7550f447a8
+  Type: function definition analyzed
+  Visibility: force_output prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: available
+  First run: 0
+  Function flags: body
+  Called by: 
+  Calls: a_inline_static_func/2 (1.00 per call) a_func/3 (1.00 per call) 
+a_func/3 (a_func) @0x7f7550f44620
+  Type: function definition analyzed
+  Visibility: force_output externally_visible public weak
+  References: 
+  Referring: 
+  Availability: overwritable
+  First run: 0
+  Function flags: body
+  Called by: main_func/5 (1.00 per call) a_static_func2/4 (1.00 per call) 
+  Calls: a_inline_static_func/2 (1.00 per call) 
+a_inline_static_func/2 (a_inline_static_func) @0x7f7550f44498
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  Address is taken.
+  References: 
+  Referring: aa_/1 (addr)
+  Availability: available
+  First run: 0
+  Function flags: body
+  Called by: a_static_func2/4 (1.00 per call) a_func/3 (1.00 per call) 
+  Calls: 
+aa_/1 (aa_) @0x7f755106d200
+  Type: variable definition analyzed
+  Visibility: force_output externally_visible public
+  References: a_inline_static_func/2 (addr)
+  Referring: 
+  Availability: available
+  Varpool flags: initialized
+a_/0 (a_) @0x7f755106d080
+  Type: variable definition analyzed
+  Visibility: force_output prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags:
+Materializing clones
+Materialization Call site updates done.
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+
+Final Symbol table:
+
+main_func/5 (main_func) @0x7f7550f44930
+  Type: function definition analyzed
+  Visibility: force_output prevailing_def_ironly asm_written
+  References: 
+  Referring: 
+  Availability: available
+  First run: 0
+  Function flags:
+  Called by: 
+  Calls: 
+a_static_func2/4 (a_static_func2) @0x7f7550f447a8
+  Type: function definition analyzed
+  Visibility: force_output prevailing_def_ironly asm_written
+  References: 
+  Referring: 
+  Availability: available
+  First run: 0
+  Function flags:
+  Called by: 
+  Calls: 
+a_func/3 (a_func) @0x7f7550f44620
+  Type: function definition analyzed
+  Visibility: force_output externally_visible asm_written public weak
+  References: 
+  Referring: 
+  Availability: overwritable
+  First run: 0
+  Function flags:
+  Called by: 
+  Calls: 
+a_inline_static_func/2 (a_inline_static_func) @0x7f7550f44498
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly asm_written
+  Address is taken.
+  References: 
+  Referring: aa_/1 (addr)
+  Availability: available
+  First run: 0
+  Function flags:
+  Called by: 
+  Calls: 
+aa_/1 (aa_) @0x7f755106d200
+  Type: variable definition analyzed
+  Visibility: force_output externally_visible asm_written public
+  References: a_inline_static_func/2 (addr)
+  Referring: 
+  Availability: available
+  Varpool flags: initialized
+a_/0 (a_) @0x7f755106d080
+  Type: variable definition analyzed
+  Visibility: force_output prevailing_def_ironly asm_written
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags:
